@@ -46,3 +46,7 @@ Browser snapshots keep the complete recorded state in localStorage, capped at ei
 ## Hosting
 
 The deployed preview is a static browser sandbox. It never contains server-side SDK keys. The complete Docker/Node deployment adds the real Flagsmith adapter. The Compose topology follows the official Flagsmith combined-image deployment guide and includes a migration job and task processor.
+
+## Connected verification
+
+The self-hosted stack and connected rehearsal passed in [GitHub Actions run 44396236912](https://github.com/mario-lindev/switchyard/actions/runs/44396236912). The workflow bootstraps an ephemeral real Flagsmith project and environment, evaluates identities, rehearses the checkout failure, mutates the actual feature state, verifies read-back, and uploads `connected-evidence.json`. The regression test suite also covers numeric feature IDs returned by the real management API.

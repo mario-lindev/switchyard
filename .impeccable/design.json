@@ -1,1 +1,492 @@
-{"version":1,"tokens":{"color":{"canvas":"#f6f7f9","surface":"#ffffff","navigation":"#171b23","ink":"#202631","muted":"#69717f","line":"#e5e8ed","accent":"#e65e36","positive":"#218564","danger":"#d54e4e"},"font":{"ui":"DM Sans Variable","data":"JetBrains Mono Variable"},"radius":{"control":"8px","panel":"12px"},"spacingBase":"4px"}}
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T21:00:19.411992+00:00",
+  "title": "Design System: Switchyard",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Vermilion Action",
+        "tonalRamp": [
+          "oklch(15% 0.1715 36.17)",
+          "oklch(26% 0.1715 36.17)",
+          "oklch(38% 0.1715 36.17)",
+          "oklch(49% 0.1715 36.17)",
+          "oklch(61% 0.1715 36.17)",
+          "oklch(72% 0.1715 36.17)",
+          "oklch(84% 0.1715 36.17)",
+          "oklch(95% 0.1715 36.17)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Warm Action Hover",
+        "tonalRamp": [
+          "oklch(15% 0.1701 36.43)",
+          "oklch(26% 0.1701 36.43)",
+          "oklch(38% 0.1701 36.43)",
+          "oklch(49% 0.1701 36.43)",
+          "oklch(61% 0.1701 36.43)",
+          "oklch(72% 0.1701 36.43)",
+          "oklch(84% 0.1701 36.43)",
+          "oklch(95% 0.1701 36.43)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0029 264.54)",
+          "oklch(26% 0.0029 264.54)",
+          "oklch(38% 0.0029 264.54)",
+          "oklch(49% 0.0029 264.54)",
+          "oklch(61% 0.0029 264.54)",
+          "oklch(72% 0.0029 264.54)",
+          "oklch(84% 0.0029 264.54)",
+          "oklch(95% 0.0029 264.54)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Instrument White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "Graphite Rail",
+        "tonalRamp": [
+          "oklch(15% 0.0168 264.15)",
+          "oklch(26% 0.0168 264.15)",
+          "oklch(38% 0.0168 264.15)",
+          "oklch(49% 0.0168 264.15)",
+          "oklch(61% 0.0168 264.15)",
+          "oklch(72% 0.0168 264.15)",
+          "oklch(84% 0.0168 264.15)",
+          "oklch(95% 0.0168 264.15)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0224 262.46)",
+          "oklch(26% 0.0224 262.46)",
+          "oklch(38% 0.0224 262.46)",
+          "oklch(49% 0.0224 262.46)",
+          "oklch(61% 0.0224 262.46)",
+          "oklch(72% 0.0224 262.46)",
+          "oklch(84% 0.0224 262.46)",
+          "oklch(95% 0.0224 262.46)"
+        ]
+      },
+      "secondary-text": {
+        "role": "neutral",
+        "displayName": "Readable Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0256 254.50)",
+          "oklch(26% 0.0256 254.50)",
+          "oklch(38% 0.0256 254.50)",
+          "oklch(49% 0.0256 254.50)",
+          "oklch(61% 0.0256 254.50)",
+          "oklch(72% 0.0256 254.50)",
+          "oklch(84% 0.0256 254.50)",
+          "oklch(95% 0.0256 254.50)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Legacy Muted Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0239 261.71)",
+          "oklch(26% 0.0239 261.71)",
+          "oklch(38% 0.0239 261.71)",
+          "oklch(49% 0.0239 261.71)",
+          "oklch(61% 0.0239 261.71)",
+          "oklch(72% 0.0239 261.71)",
+          "oklch(84% 0.0239 261.71)",
+          "oklch(95% 0.0239 261.71)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Cool Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.0075 260.73)",
+          "oklch(26% 0.0075 260.73)",
+          "oklch(38% 0.0075 260.73)",
+          "oklch(49% 0.0075 260.73)",
+          "oklch(61% 0.0075 260.73)",
+          "oklch(72% 0.0075 260.73)",
+          "oklch(84% 0.0075 260.73)",
+          "oklch(95% 0.0075 260.73)"
+        ]
+      },
+      "positive": {
+        "role": "status",
+        "displayName": "Healthy Green",
+        "tonalRamp": [
+          "oklch(15% 0.1037 166.00)",
+          "oklch(26% 0.1037 166.00)",
+          "oklch(38% 0.1037 166.00)",
+          "oklch(49% 0.1037 166.00)",
+          "oklch(61% 0.1037 166.00)",
+          "oklch(72% 0.1037 166.00)",
+          "oklch(84% 0.1037 166.00)",
+          "oklch(95% 0.1037 166.00)"
+        ]
+      },
+      "danger": {
+        "role": "status",
+        "displayName": "Failure Red",
+        "tonalRamp": [
+          "oklch(15% 0.1705 23.69)",
+          "oklch(26% 0.1705 23.69)",
+          "oklch(38% 0.1705 23.69)",
+          "oklch(49% 0.1705 23.69)",
+          "oklch(61% 0.1705 23.69)",
+          "oklch(72% 0.1705 23.69)",
+          "oklch(84% 0.1705 23.69)",
+          "oklch(95% 0.1705 23.69)"
+        ]
+      },
+      "nav-active-surface": {
+        "role": "neutral",
+        "displayName": "Warm Rail Selection",
+        "tonalRamp": [
+          "oklch(15% 0.0224 46.03)",
+          "oklch(26% 0.0224 46.03)",
+          "oklch(38% 0.0224 46.03)",
+          "oklch(49% 0.0224 46.03)",
+          "oklch(61% 0.0224 46.03)",
+          "oklch(72% 0.0224 46.03)",
+          "oklch(84% 0.0224 46.03)",
+          "oklch(95% 0.0224 46.03)"
+        ]
+      },
+      "nav-active-text": {
+        "role": "neutral",
+        "displayName": "Peach Rail Text",
+        "tonalRamp": [
+          "oklch(15% 0.1412 38.08)",
+          "oklch(26% 0.1412 38.08)",
+          "oklch(38% 0.1412 38.08)",
+          "oklch(49% 0.1412 38.08)",
+          "oklch(61% 0.1412 38.08)",
+          "oklch(72% 0.1412 38.08)",
+          "oklch(84% 0.1412 38.08)",
+          "oklch(95% 0.1412 38.08)"
+        ]
+      },
+      "nav-text": {
+        "role": "neutral",
+        "displayName": "Rail Text",
+        "tonalRamp": [
+          "oklch(15% 0.0192 258.36)",
+          "oklch(26% 0.0192 258.36)",
+          "oklch(38% 0.0192 258.36)",
+          "oklch(49% 0.0192 258.36)",
+          "oklch(61% 0.0192 258.36)",
+          "oklch(72% 0.0192 258.36)",
+          "oklch(84% 0.0192 258.36)",
+          "oklch(95% 0.0192 258.36)"
+        ]
+      },
+      "healthy-surface": {
+        "role": "status",
+        "displayName": "Healthy Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0140 162.48)",
+          "oklch(26% 0.0140 162.48)",
+          "oklch(38% 0.0140 162.48)",
+          "oklch(49% 0.0140 162.48)",
+          "oklch(61% 0.0140 162.48)",
+          "oklch(72% 0.0140 162.48)",
+          "oklch(84% 0.0140 162.48)",
+          "oklch(95% 0.0140 162.48)"
+        ]
+      },
+      "healthy-text": {
+        "role": "status",
+        "displayName": "Healthy Badge Text",
+        "tonalRamp": [
+          "oklch(15% 0.0975 166.85)",
+          "oklch(26% 0.0975 166.85)",
+          "oklch(38% 0.0975 166.85)",
+          "oklch(49% 0.0975 166.85)",
+          "oklch(61% 0.0975 166.85)",
+          "oklch(72% 0.0975 166.85)",
+          "oklch(84% 0.0975 166.85)",
+          "oklch(95% 0.0975 166.85)"
+        ]
+      },
+      "warning-surface": {
+        "role": "status",
+        "displayName": "Warning Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0144 64.35)",
+          "oklch(26% 0.0144 64.35)",
+          "oklch(38% 0.0144 64.35)",
+          "oklch(49% 0.0144 64.35)",
+          "oklch(61% 0.0144 64.35)",
+          "oklch(72% 0.0144 64.35)",
+          "oklch(84% 0.0144 64.35)",
+          "oklch(95% 0.0144 64.35)"
+        ]
+      },
+      "warning-text": {
+        "role": "status",
+        "displayName": "Warning Ochre",
+        "tonalRamp": [
+          "oklch(15% 0.0967 63.91)",
+          "oklch(26% 0.0967 63.91)",
+          "oklch(38% 0.0967 63.91)",
+          "oklch(49% 0.0967 63.91)",
+          "oklch(61% 0.0967 63.91)",
+          "oklch(72% 0.0967 63.91)",
+          "oklch(84% 0.0967 63.91)",
+          "oklch(95% 0.0967 63.91)"
+        ]
+      },
+      "toggle-on": {
+        "role": "status",
+        "displayName": "Soft Toggle Orange",
+        "tonalRamp": [
+          "oklch(15% 0.1518 41.29)",
+          "oklch(26% 0.1518 41.29)",
+          "oklch(38% 0.1518 41.29)",
+          "oklch(49% 0.1518 41.29)",
+          "oklch(61% 0.1518 41.29)",
+          "oklch(72% 0.1518 41.29)",
+          "oklch(84% 0.1518 41.29)",
+          "oklch(95% 0.1518 41.29)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Page Heading",
+        "purpose": "Main page title; 27px on smaller screens."
+      },
+      "title": {
+        "displayName": "Panel Title",
+        "purpose": "14px on wide desktops, with contextual responsive overrides."
+      },
+      "body": {
+        "displayName": "UI Foundation",
+        "purpose": "Root type; workbench copy uses smaller contextual sizes."
+      },
+      "label": {
+        "displayName": "Metric Label",
+        "purpose": "Desktop metric captions."
+      },
+      "metric": {
+        "displayName": "Measured Value",
+        "purpose": "Tabular numeric metrics."
+      },
+      "code": {
+        "displayName": "Code and Data",
+        "purpose": "Identifiers, code, timestamps, and selected measurements."
+      }
+    },
+    "shadows": [
+      {
+        "name": "primary-action",
+        "value": "0 2px 4px #b3462420",
+        "purpose": "Primary action button."
+      },
+      {
+        "name": "secondary-action",
+        "value": "0 1px 2px #20263105",
+        "purpose": "Secondary action button."
+      },
+      {
+        "name": "service-node",
+        "value": "0 3px 8px #20263104",
+        "purpose": "Small service cards."
+      },
+      {
+        "name": "node-inspector",
+        "value": "0 5px 15px #2026310b",
+        "purpose": "Selected-service inspector."
+      },
+      {
+        "name": "expanded-topology",
+        "value": "0 16px 80px #2026313b",
+        "purpose": "Expanded topology overlay."
+      },
+      {
+        "name": "command-dialog",
+        "value": "0 20px 70px #14223c33",
+        "purpose": "Command palette."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-transition",
+        "value": "background 0.16s, border-color 0.16s, transform 0.16s",
+        "purpose": "Primary and secondary button state transitions."
+      },
+      {
+        "name": "service-transition",
+        "value": "border-color 0.25s, background 0.25s",
+        "purpose": "Service hover and selection."
+      },
+      {
+        "name": "toggle-transition",
+        "value": "background 0.2s; transform 0.2s",
+        "purpose": "Track and thumb state changes."
+      },
+      {
+        "name": "mobile-request",
+        "value": "mobile-traffic 1.3s linear infinite; translateX(0) to translateX(13px)",
+        "purpose": "Running synthetic request markers on phone."
+      },
+      {
+        "name": "graph-request",
+        "value": "SVG animateMotion; duration 1.7s + edge index \u00d7 0.13s; indefinite",
+        "purpose": "Request particles on desktop graph while running."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition: none !important; scroll-behavior: auto !important",
+        "purpose": "Shared reduced-motion override; SVG request circles are hidden."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-max",
+        "value": "540px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "760px"
+      },
+      {
+        "name": "icon-rail-max",
+        "value": "1050px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      },
+      {
+        "name": "large-desktop-min",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main run action.",
+      "html": "<button class=\"ds-primary\">Run rehearsal</button>",
+      "css": ".ds-primary{font-family:\"DM Sans Variable\",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 14px;border-radius:7px;min-height:38px;border:1px solid transparent;font-size:13px;font-weight:550;cursor:pointer;transition:background .16s,border-color .16s,transform .16s;color:#fff;background:var(--accent,#c94823);border-color:var(--accent,#c94823);box-shadow:0 2px 4px #b3462420}.ds-primary:hover{background:#ce4e29;border-color:#ce4e29}.ds-primary:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}.ds-primary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting actions such as export.",
+      "html": "<button class=\"ds-secondary\">Export evidence</button>",
+      "css": ".ds-secondary{font-family:\"DM Sans Variable\",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 14px;border-radius:7px;min-height:38px;border:1px solid transparent;font-size:13px;font-weight:550;cursor:pointer;transition:background .16s,border-color .16s,transform .16s;background:#fff;color:#4b535f;border-color:#dce0e6;box-shadow:0 1px 2px #20263105}.ds-secondary:hover{background:#f4f5f7;border-color:#bdc3cd}.ds-secondary:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}.ds-secondary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis supporting action.",
+      "html": "<button class=\"ds-text\">View connection</button>",
+      "css": ".ds-text{font-family:\"DM Sans Variable\",sans-serif;background:transparent;border:0;padding:0;color:#777f8d;font-size:12px;font-weight:500;cursor:pointer}.ds-text:hover{color:var(--accent,#c94823)}.ds-text:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}"
+    },
+    {
+      "name": "Number Field",
+      "kind": "input",
+      "refersTo": "input-number",
+      "description": "Guardrail threshold paired with a unit.",
+      "html": "<label class=\"ds-number\"><input aria-label=\"Error rate threshold\" type=\"number\" value=\"5\"><span>%</span></label>",
+      "css": ".ds-number{display:inline-flex;border:1px solid #dde3eb;border-radius:7px;overflow:hidden;background:#fafbfc}.ds-number input{width:83px;padding:10px 5px 10px 12px;border:0;background:#fff;font:12px \"JetBrains Mono Variable\",monospace;color:#566477}.ds-number span{font-family:\"DM Sans Variable\",sans-serif;font-size:11px;color:#8a95a4;padding:10px 12px}.ds-number input:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Graphite rail with warm active state.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Workbench\"><button class=\"ds-nav-item ds-active\" aria-current=\"page\">Release lab <span>\u2022</span></button><button class=\"ds-nav-item\">Feature flags</button></nav>",
+      "css": ".ds-nav{width:220px;padding:12px;background:var(--sidebar,#171b23);display:grid;gap:5px}.ds-nav-item{font-family:\"DM Sans Variable\",sans-serif;display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;border-radius:7px;padding:11px 12px;min-height:40px;color:#b5bdc9;font-size:14px;font-weight:450;text-align:left;cursor:pointer}.ds-nav-item:hover{background:#252b35;color:#fff}.ds-nav-item.ds-active{background:#342721;color:#f88b69}.ds-nav-item:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}"
+    },
+    {
+      "name": "Healthy Badge",
+      "kind": "chip",
+      "refersTo": "chip-healthy",
+      "description": "A labeled healthy status.",
+      "html": "<span class=\"ds-badge\"><span></span>Healthy</span>",
+      "css": ".ds-badge{font-family:\"DM Sans Variable\",sans-serif;display:inline-flex;align-items:center;gap:5px;border:1px solid #d9eee3;border-radius:5px;line-height:1.4;padding:3px 6px;background:#edf8f2;color:#248062;font-size:10px;font-weight:450}.ds-badge>span{width:6px;height:6px;border-radius:50%;background:#3ca77f}"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Default flat work surface.",
+      "html": "<section class=\"ds-panel\"><header>Feature flags <span>3</span></header><p>Connected flag decisions \u00b7 synthetic traffic</p></section>",
+      "css": ".ds-panel{font-family:\"DM Sans Variable\",sans-serif;background:var(--surface,#fff);border:1px solid var(--line,#e5e8ed);border-radius:var(--radius,12px);overflow:hidden;min-width:0;color:var(--ink,#202631);width:300px}.ds-panel header{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;border-bottom:1px solid #edf0f3;font-size:14px;font-weight:600}.ds-panel header span{font-size:9px;color:#929ba9;padding:1px 5px;background:#f1f3f6;border:1px solid #e9ecf0;border-radius:4px}.ds-panel p{font-size:11px;color:#66717f;padding:16px;margin:0;line-height:1.6}"
+    },
+    {
+      "name": "Service Node",
+      "kind": "custom",
+      "refersTo": "service-node",
+      "description": "Selectable synthetic service with measured state.",
+      "html": "<button class=\"ds-service\"><span class=\"ds-service-top\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 2 1.5 4H20l-2 8H7L4 3H2M8 18h.01M18 18h.01\"/></svg> <i></i></span><strong>Checkout</strong><code>checkout_v2</code><span class=\"ds-service-bottom\">47 <small>ms</small><em>healthy</em></span></button>",
+      "css": ".ds-service{font-family:\"DM Sans Variable\",sans-serif;width:140px;min-height:97px;background:#fff;border:1px solid #dce2e9;border-radius:8px;padding:9px;text-align:left;box-shadow:0 3px 8px #20263104;color:#414a58;cursor:pointer;transition:border-color .25s,background .25s}.ds-service:hover{border-color:#e49376;background:#fffcfa}.ds-service:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}.ds-service-top{display:flex;justify-content:space-between;align-items:center;color:#7b8797;margin-bottom:8px}.ds-service-top i{width:6px;height:6px;border-radius:50%;background:#3ca77f}.ds-service strong{display:block;font-size:11px;font-weight:550;line-height:1.25}.ds-service code{display:block;font:8px \"JetBrains Mono Variable\",monospace;color:#66717f;margin-top:4px}.ds-service-bottom{display:flex;align-items:center;gap:2px;border-top:1px solid #edf0f3;margin-top:8px;padding-top:7px;font:9px \"JetBrains Mono Variable\",monospace}.ds-service-bottom small{font-size:7px;color:#66717f}.ds-service-bottom em{margin-left:auto;font:8px \"DM Sans Variable\",sans-serif;color:var(--positive,#218564)}@media(prefers-reduced-motion:reduce){.ds-service{transition:none}}"
+    },
+    {
+      "name": "Feature Switch",
+      "kind": "custom",
+      "refersTo": "toggle-on",
+      "description": "Enabled flag switch in its compact state.",
+      "html": "<button class=\"ds-toggle\" role=\"switch\" aria-checked=\"true\" aria-label=\"Checkout v2\"><span></span></button>",
+      "css": ".ds-toggle{width:30px;height:17px;display:flex;align-items:center;padding:2px;border:0;border-radius:10px;background:#e9784c;cursor:pointer;transition:background .2s}.ds-toggle>span{width:13px;height:13px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #2223;transform:translateX(13px);transition:transform .2s}.ds-toggle:focus-visible{outline:2px solid var(--accent,#c94823);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-toggle,.ds-toggle>span{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bright Engineering Instrument",
+    "overview": "A bright engineering instrument: paper-white work surfaces, a graphite navigation rail, vermilion actions, green healthy telemetry, and precise hairlines. The existing visual world is practical, calm, and dense enough for an engineer to operate a release rehearsal without losing the relationship between controls and outcomes.\n\nThe light topology is the signature spatial element. Small service cards, measured values, and moving request markers connect a flag decision to a visible failure or recovery. All traffic, service metrics, latencies, and failures are synthetic; a connected Flagsmith API supplies real flag decisions. Connection and simulation labels are part of the interface's visual truth.",
+    "keyCharacteristics": [
+      "Light work surfaces framed by graphite navigation.",
+      "Restrained vermilion actions with semantic health and failure states.",
+      "Readable UI type paired with monospaced code and measured data.",
+      "Compact operational controls and a responsive service topology."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Rule",
+        "body": "Connection state identifies the flag source; it never changes the synthetic nature of traffic or telemetry.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do use the primary token for the main run action and keyboard focus.",
+      "Do use secondary-text for recurring readable metadata; preserve the separate muted token only where the current implementation uses it.",
+      "Do pair service colors with status text, icons, or labels.",
+      "Do preserve the synthetic-traffic disclosure alongside connection state.",
+      "Do keep mobile flag controls before the topology, with telemetry below the controls and service view.",
+      "Do respect reduced-motion preferences while preserving the underlying controls and status information."
+    ],
+    "donts": [
+      "Don't describe simulated topology or telemetry as production infrastructure.",
+      "Don't reuse the superseded orange primary from the earlier design document.",
+      "Don't scale down the desktop topology on narrow phones; use the compact request path and service grid.",
+      "Don't turn every surface into a floating card; borders and tonal separation provide the normal hierarchy."
+    ]
+  }
+}

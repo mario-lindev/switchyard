@@ -11,4 +11,4 @@ dist/
 *.tsbuildinfo
 
 .ci.env
-connected-evidence.json
+/connected-evidence.json

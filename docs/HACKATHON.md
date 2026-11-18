@@ -29,6 +29,6 @@ This repository was prepared before the published start date. The page does not 
 - A concise problem/solution description with the Flagsmith integration explained.
 - Docker instructions and a clean-machine setup check.
 - A sample evidence JSON and CI artifact.
-- Honest verification status and limitations: synthetic traffic, application-side rollout bucketing, sampled identity assignments, and the Docker smoke test still required in the authoring environment.
+- Honest verification status and limitations: synthetic traffic, application-side rollout bucketing, sampled identity assignments, and the self-hosted Docker/SDK/management smoke test verified in GitHub Actions.
 
 No application can guarantee a judging outcome. The strongest submission is the one whose core workflow can be shown working and reproduced by another developer.

@@ -1,0 +1,769 @@
+{
+  "schemaVersion": 1,
+  "product": "Switchyard",
+  "synthetic": true,
+  "source": "flagsmith",
+  "seed": 4271,
+  "scenario": "checkout-regression",
+  "startedAt": "2026-11-18T20:58:29.443Z",
+  "durationSeconds": 60,
+  "rolloutPercent": 25,
+  "flags": {
+    "checkout_v2": false,
+    "smart_cache": true,
+    "payment_retry": true
+  },
+  "guardrails": {
+    "autoRollback": true,
+    "errorRate": 3,
+    "p95": 500,
+    "cohortErrorRate": 8,
+    "consecutive": 3
+  },
+  "remoteAssignments": {
+    "visitor-0": false,
+    "visitor-1": false,
+    "visitor-2": true,
+    "visitor-3": false,
+    "visitor-4": true,
+    "visitor-5": true,
+    "visitor-6": false,
+    "visitor-7": false,
+    "visitor-8": false,
+    "visitor-9": false,
+    "visitor-10": true,
+    "visitor-11": false,
+    "visitor-12": false,
+    "visitor-13": false,
+    "visitor-14": false,
+    "visitor-15": true,
+    "visitor-16": true,
+    "visitor-17": false,
+    "visitor-18": false,
+    "visitor-19": false,
+    "visitor-20": true,
+    "visitor-21": false,
+    "visitor-22": false,
+    "visitor-23": false,
+    "visitor-24": false,
+    "visitor-25": true,
+    "visitor-26": false,
+    "visitor-27": false,
+    "visitor-28": false,
+    "visitor-29": false,
+    "visitor-30": false,
+    "visitor-31": true,
+    "visitor-32": false,
+    "visitor-33": false,
+    "visitor-34": false,
+    "visitor-35": false,
+    "visitor-36": false,
+    "visitor-37": false,
+    "visitor-38": false,
+    "visitor-39": false,
+    "visitor-40": true,
+    "visitor-41": true,
+    "visitor-42": false,
+    "visitor-43": false,
+    "visitor-44": false,
+    "visitor-45": false,
+    "visitor-46": true,
+    "visitor-47": false,
+    "visitor-48": false,
+    "visitor-49": false,
+    "visitor-50": false,
+    "visitor-51": false,
+    "visitor-52": true,
+    "visitor-53": false,
+    "visitor-54": false,
+    "visitor-55": true,
+    "visitor-56": false,
+    "visitor-57": false,
+    "visitor-58": true,
+    "visitor-59": false,
+    "visitor-60": false,
+    "visitor-61": false,
+    "visitor-62": true,
+    "visitor-63": false,
+    "visitor-64": false,
+    "visitor-65": true,
+    "visitor-66": false,
+    "visitor-67": false,
+    "visitor-68": true,
+    "visitor-69": false,
+    "visitor-70": false,
+    "visitor-71": false,
+    "visitor-72": true,
+    "visitor-73": false,
+    "visitor-74": false,
+    "visitor-75": true,
+    "visitor-76": false,
+    "visitor-77": false,
+    "visitor-78": true,
+    "visitor-79": false,
+    "visitor-80": false,
+    "visitor-81": false,
+    "visitor-82": false,
+    "visitor-83": false,
+    "visitor-84": false,
+    "visitor-85": false,
+    "visitor-86": false,
+    "visitor-87": true,
+    "visitor-88": false,
+    "visitor-89": true,
+    "visitor-90": false,
+    "visitor-91": true,
+    "visitor-92": true,
+    "visitor-93": false,
+    "visitor-94": false,
+    "visitor-95": false,
+    "visitor-96": false,
+    "visitor-97": true,
+    "visitor-98": false,
+    "visitor-99": false
+  },
+  "faultAt": 10,
+  "rollbackAt": 12,
+  "requests": 7200,
+  "errors": 41,
+  "errorRate": 0.5694444444444444,
+  "p95Ms": 147,
+  "cohorts": [
+    {
+      "name": "Mobile · EU",
+      "requests": 1800,
+      "errors": 30,
+      "rate": 1.6666666666666667,
+      "candidateRequests": 115
+    },
+    {
+      "name": "Desktop · US",
+      "requests": 1800,
+      "errors": 2,
+      "rate": 0.1111111111111111,
+      "candidateRequests": 86
+    },
+    {
+      "name": "Mobile · US",
+      "requests": 1800,
+      "errors": 4,
+      "rate": 0.2222222222222222,
+      "candidateRequests": 86
+    },
+    {
+      "name": "Desktop · EU",
+      "requests": 1800,
+      "errors": 5,
+      "rate": 0.2777777777777778,
+      "candidateRequests": 86
+    }
+  ],
+  "timeline": [
+    {
+      "id": 0,
+      "second": 0,
+      "kind": "info",
+      "title": "Lab ready",
+      "detail": "Synthetic traffic only. Your production is out of reach."
+    },
+    {
+      "id": 1,
+      "second": 0,
+      "kind": "info",
+      "title": "Rehearsal started",
+      "detail": "Seed 4271 · 25% candidate exposure · Flagsmith identity evaluations"
+    },
+    {
+      "id": 2,
+      "second": 10,
+      "kind": "danger",
+      "title": "Checkout regression injected",
+      "detail": "The fault affects synthetic requests only. Watching the guardrails."
+    },
+    {
+      "id": 3,
+      "second": 10,
+      "kind": "warning",
+      "title": "Guardrail threshold crossed",
+      "detail": "Mobile · EU: 8.9% errors in the last 3s."
+    },
+    {
+      "id": 4,
+      "second": 12,
+      "kind": "warning",
+      "title": "Automatic rollback requested",
+      "detail": "Guardrail breached for 3 consecutive seconds. Disabling checkout_v2."
+    },
+    {
+      "id": 5,
+      "second": 12,
+      "kind": "flag",
+      "title": "checkout_v2 disabled",
+      "detail": "Confirmed by the self-hosted Flagsmith API."
+    },
+    {
+      "id": 6,
+      "second": 12,
+      "kind": "success",
+      "title": "Rollback confirmed",
+      "detail": "checkout_v2 is off. New requests use the control path; the injected fault remains active."
+    },
+    {
+      "id": 7,
+      "second": 13,
+      "kind": "warning",
+      "title": "Guardrail threshold crossed",
+      "detail": "Mobile · EU: 16.7% errors in the last 3s."
+    },
+    {
+      "id": 8,
+      "second": 60,
+      "kind": "success",
+      "title": "Rehearsal complete",
+      "detail": "7,200 synthetic requests processed. Export the evidence or replay with the same seed."
+    }
+  ],
+  "timeseries": [
+    {
+      "second": 1,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 32
+    },
+    {
+      "second": 2,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 29
+    },
+    {
+      "second": 3,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 147,
+      "candidateErrors": 1,
+      "candidateRequests": 32
+    },
+    {
+      "second": 4,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 32
+    },
+    {
+      "second": 5,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 31
+    },
+    {
+      "second": 6,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 144,
+      "candidateErrors": 0,
+      "candidateRequests": 32
+    },
+    {
+      "second": 7,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 29
+    },
+    {
+      "second": 8,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 149,
+      "candidateErrors": 1,
+      "candidateRequests": 32
+    },
+    {
+      "second": 9,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 32
+    },
+    {
+      "second": 10,
+      "requests": 120,
+      "errors": 7,
+      "errorRate": 5.833333333333333,
+      "p95": 864,
+      "candidateErrors": 6,
+      "candidateRequests": 31
+    },
+    {
+      "second": 11,
+      "requests": 120,
+      "errors": 9,
+      "errorRate": 7.5,
+      "p95": 738,
+      "candidateErrors": 9,
+      "candidateRequests": 32
+    },
+    {
+      "second": 12,
+      "requests": 120,
+      "errors": 6,
+      "errorRate": 5,
+      "p95": 725,
+      "candidateErrors": 6,
+      "candidateRequests": 29
+    },
+    {
+      "second": 13,
+      "requests": 120,
+      "errors": 2,
+      "errorRate": 1.6666666666666667,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 14,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 15,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 16,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 145,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 17,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 18,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 19,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 20,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 21,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 22,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 23,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 24,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 25,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 26,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 27,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 28,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 29,
+      "requests": 120,
+      "errors": 2,
+      "errorRate": 1.6666666666666667,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 30,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 31,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 32,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 33,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 34,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 35,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 36,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 37,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 38,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 39,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 40,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 41,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 42,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 43,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 44,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 45,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 149,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 46,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 47,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 48,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 49,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 50,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 51,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 52,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 53,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 146,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 54,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 55,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 56,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 57,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 58,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 143,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 59,
+      "requests": 120,
+      "errors": 1,
+      "errorRate": 0.8333333333333334,
+      "p95": 148,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    },
+    {
+      "second": 60,
+      "requests": 120,
+      "errors": 0,
+      "errorRate": 0,
+      "p95": 147,
+      "candidateErrors": 0,
+      "candidateRequests": 0
+    }
+  ],
+  "note": "This report contains synthetic request outcomes, not production telemetry. Flagsmith identity assignments are real only when source is flagsmith."
+}

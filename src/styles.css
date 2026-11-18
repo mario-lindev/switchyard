@@ -5037,3 +5037,10 @@ input[type="range"]::-moz-range-thumb {
     transform: translateX(13px);
   }
 }
+.sidebar .nav-link:not(.active),
+.mobile-navigation .nav-link:not(.active) {
+  color: #b5bdc9;
+}
+.badge.orange {
+  color: #94602a;
+}

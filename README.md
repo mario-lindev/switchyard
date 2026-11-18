@@ -15,6 +15,8 @@ MIT licensed · React + TypeScript · Official Flagsmith Node SDK · Docker Comp
 
 </div>
 
+![Switchyard release lab with service topology, feature flags, guardrails, and cohort telemetry](docs/switchyard.jpg)
+
 ## The problem
 
 An aggregate error rate can hide a broken experience for a specific customer segment. A feature flag is useful only if a team can discover the regression, disable the right path, and demonstrate that the rollback actually worked.
@@ -135,7 +137,7 @@ console.log(evidence(guarded));
 
 ## Verification scope
 
-The automated suite covers the engine, rollback semantics, override detection, request validation, secret redaction, and the official SDK against a contract-level HTTP fixture. The interface is checked at desktop and mobile sizes. **The Docker stack has not been executed in the authoring environment, where Docker is unavailable.** A real self-hosted smoke test is required before claiming a connected end-to-end demonstration. See [the demo guide](docs/DEMO.md) for the checklist.
+The automated suite covers the engine, rollback semantics, override detection, request validation, secret redaction, and the official SDK against a contract-level HTTP fixture. The interface is checked at desktop and mobile sizes. **The complete Docker stack and connected rehearsal passed in [GitHub Actions](https://github.com/mario-lindev/switchyard/actions/runs/44396236912).** That run created an isolated real Flagsmith environment, evaluated 100 transient identities through the official SDK, wrote the checkout rollback through the management API, checked SDK/identity read-back, and uploaded the connected evidence. Docker remains unavailable on the authoring workstation; CI supplied the real-container verification. The [connected evidence](docs/connected-evidence.json) records 7,200 synthetic requests, 41 observed errors with real remote assignments, and a confirmed real flag rollback at second 12. See [the demo guide](docs/DEMO.md) for the checklist.
 
 ## Project layout
 
