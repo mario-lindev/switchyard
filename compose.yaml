@@ -1,0 +1,62 @@
+x-flagsmith-env: &flagsmith-env
+  DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@postgres:5432/flagsmith
+  DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set DJANGO_SECRET_KEY in .env}
+  WAREHOUSE_CREDENTIALS_SECRET: ${WAREHOUSE_CREDENTIALS_SECRET:?Set WAREHOUSE_CREDENTIALS_SECRET in .env}
+  ENVIRONMENT: production
+  DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,flagsmith
+  FLAGSMITH_DOMAIN: localhost:8000
+  USE_POSTGRES_FOR_ANALYTICS: "true"
+  EXPERIMENTATION_ENABLED: "true"
+  TASK_RUN_METHOD: TASK_PROCESSOR
+services:
+  postgres:
+    image: postgres:15.5-alpine
+    environment:
+      POSTGRES_DB: flagsmith
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d flagsmith"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  migrate-db:
+    image: ${FLAGSMITH_IMAGE:-docker.flagsmith.com/flagsmith/flagsmith:latest}
+    command: ["migrate"]
+    environment: *flagsmith-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+  flagsmith:
+    image: ${FLAGSMITH_IMAGE:-docker.flagsmith.com/flagsmith/flagsmith:latest}
+    command: ["serve"]
+    environment: *flagsmith-env
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      migrate-db:
+        condition: service_completed_successfully
+  flagsmith-task-processor:
+    image: ${FLAGSMITH_IMAGE:-docker.flagsmith.com/flagsmith/flagsmith:latest}
+    command: ["run-task-processor"]
+    environment: *flagsmith-env
+    depends_on:
+      migrate-db:
+        condition: service_completed_successfully
+  switchyard:
+    build: .
+    environment:
+      HOST: 0.0.0.0
+      FLAGSMITH_API_URL: http://flagsmith:8000/api/v1/
+      FLAGSMITH_ENVIRONMENT_KEY: ${FLAGSMITH_ENVIRONMENT_KEY:-}
+      FLAGSMITH_ENVIRONMENT_ID: ${FLAGSMITH_ENVIRONMENT_ID:-}
+      FLAGSMITH_MANAGEMENT_TOKEN: ${FLAGSMITH_MANAGEMENT_TOKEN:-}
+      FLAGSMITH_ENVIRONMENT_LABEL: ${FLAGSMITH_ENVIRONMENT_LABEL:-Switchyard lab}
+      ALLOW_FLAG_MUTATIONS: ${ALLOW_FLAG_MUTATIONS:-false}
+    ports:
+      - "127.0.0.1:3001:3001"
+    depends_on:
+      - flagsmith
+volumes:
+  pgdata:

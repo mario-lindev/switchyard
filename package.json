@@ -1,0 +1,35 @@
+{
+  "name": "switchyard-release-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rehearse the release. Find the failure. Flip the flag.",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 0.0.0.0\" \"node --env-file-if-exists=.env server/index.mjs\"",
+    "build": "tsc -b && vite build",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.*",
+    "rehearse": "node --experimental-strip-types scripts/rehearse.ts",
+    "flagsmith:seed": "node --env-file-if-exists=.env scripts/seed.mjs"
+  },
+  "dependencies": {
+    "@flagsmith/nodejs": "^9.0.0",
+    "@fontsource-variable/dm-sans": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "concurrently": "^9.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2"
+  }
+}

@@ -66,9 +66,9 @@ docker compose up --build -d
 
 The stack includes Postgres, Flagsmith's combined API/dashboard image, a database migration job, its task processor, and Switchyard. Ports bind to loopback:
 
-| Service | URL |
-| --- | --- |
-| Flagsmith | http://localhost:8000 |
+| Service    | URL                   |
+| ---------- | --------------------- |
+| Flagsmith  | http://localhost:8000 |
 | Switchyard | http://localhost:3001 |
 
 1. Create an account at **http://localhost:8000/signup**.
@@ -122,7 +122,7 @@ GitHub Actions runs the test suite, builds the application, and uploads the rehe
 The simulation engine is a pure TypeScript module; it has no React, network, or browser dependency:
 
 ```ts
-import { evidence, runHeadless } from './src/engine.ts';
+import { evidence, runHeadless } from "./src/engine.ts";
 
 const guarded = runHeadless({ seed: 4271, autoRollback: true });
 const unguarded = runHeadless({ seed: 4271, autoRollback: false });

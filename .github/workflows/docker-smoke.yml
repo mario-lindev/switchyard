@@ -1,0 +1,59 @@
+name: Self-hosted stack smoke test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  docker-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure ephemeral local-lab secrets
+        run: |
+          cp .env.example .env
+          sed -i "s/replace-with-a-local-lab-password/$(openssl rand -hex 16)/" .env
+          sed -i "s/replace-with-a-random-local-lab-secret-at-least-32-characters/$(openssl rand -hex 32)/" .env
+          sed -i "s/replace-with-another-random-local-lab-secret/$(openssl rand -hex 32)/" .env
+      - run: docker compose up --build -d
+      - name: Wait for Flagsmith and Switchyard
+        run: |
+          for attempt in $(seq 1 90); do
+            if curl --fail --silent http://localhost:8000/health && curl --fail --silent http://localhost:3001/api/health; then
+              exit 0
+            fi
+            sleep 5
+          done
+          docker compose logs --tail=80
+          exit 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Bootstrap an isolated Flagsmith environment
+        run: |
+          docker compose cp scripts/ci-bootstrap.py flagsmith:/tmp/switchyard-ci-bootstrap.py
+          docker compose exec -T flagsmith python manage.py shell -c "exec(open('/tmp/switchyard-ci-bootstrap.py').read())"
+          docker compose cp flagsmith:/tmp/switchyard-ci.env .ci.env
+          cat .ci.env >> .env
+          rm .ci.env
+          docker compose up -d --force-recreate switchyard
+      - name: Wait for the configured adapter
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:3001/api/health; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+      - name: Rehearse against real self-hosted Flagsmith
+        run: node --experimental-strip-types scripts/connected-smoke.ts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: connected-flagsmith-rehearsal-evidence
+          path: connected-evidence.json
+      - name: Stop ephemeral stack
+        if: always()
+        run: docker compose down -v
