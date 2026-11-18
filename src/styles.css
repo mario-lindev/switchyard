@@ -9,7 +9,7 @@
   --ink: #202631;
   --muted: #69717f;
   --line: #e5e8ed;
-  --accent: #e65e36;
+  --accent: #c94823;
   --positive: #218564;
   --danger: #d54e4e;
   --sidebar: #171b23;
@@ -228,7 +228,7 @@ kbd {
   border-radius: 7px;
   width: 100%;
   background: transparent;
-  color: #aab2bf;
+  color: #66717f;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -333,7 +333,7 @@ kbd {
   display: block;
   font-size: 10px;
   margin-top: 4px;
-  color: #8e98a7;
+  color: #66717f;
 }
 .avatar {
   width: 32px;
@@ -629,7 +629,7 @@ main {
   font:
     10px "JetBrains Mono Variable",
     monospace;
-  color: #8c93a0;
+  color: #66717f;
   margin-top: 5px;
 }
 .context-caption > span {
@@ -641,7 +641,7 @@ main {
 .context-right {
   gap: 16px;
   font-size: 10px;
-  color: #848d9a;
+  color: #66717f;
 }
 .context-right > span {
   display: flex;
@@ -707,7 +707,7 @@ main {
 .metric-value small {
   font-size: 14px;
   font-weight: 400;
-  color: #929ba7;
+  color: #66717f;
   letter-spacing: 0;
 }
 .metric-chart {
@@ -723,7 +723,7 @@ main {
 }
 .metric-detail {
   font-size: 10px;
-  color: #939ba7;
+  color: #66717f;
   margin-top: 7px;
   display: flex;
   align-items: center;
@@ -796,7 +796,7 @@ main {
 }
 .small-muted {
   font-size: 10px;
-  color: #89929f;
+  color: #66717f;
 }
 .topology-canvas {
   position: relative;
@@ -878,7 +878,7 @@ main {
     7px "JetBrains Mono Variable",
     monospace;
   margin-top: 4px;
-  color: #929ca9;
+  color: #66717f;
   white-space: nowrap;
 }
 .node-bottom {
@@ -895,7 +895,7 @@ main {
   white-space: nowrap;
 }
 .node-bottom small {
-  color: #a1aab6;
+  color: #66717f;
   font-size: 7px;
 }
 .node-bottom > span:last-child {
@@ -918,14 +918,14 @@ main {
   left: 0;
   right: 0;
   text-align: center;
-  color: #a2aab5;
+  color: #66717f;
   font-size: 9px;
 }
 .map-legend {
   display: flex;
   justify-content: center;
   gap: 18px;
-  color: #929ca9;
+  color: #66717f;
   font-size: 9px;
   padding: 12px 0 14px;
 }
@@ -963,7 +963,7 @@ main {
     6px "JetBrains Mono Variable",
     monospace;
   background: #fcfcfd;
-  color: #a4adba;
+  color: #66717f;
   z-index: 1;
   padding: 3px;
   pointer-events: none;
@@ -989,7 +989,7 @@ main {
   padding: 10px 17px;
   gap: 8px;
   font-size: 9px;
-  color: #8d97a5;
+  color: #66717f;
 }
 .topology-footer > span {
   display: flex;
@@ -1077,7 +1077,7 @@ main {
 .flag-info > span {
   display: block;
   font-size: 9px;
-  color: #8c95a2;
+  color: #66717f;
   margin-top: 5px;
   line-height: 1.5;
 }
@@ -1158,7 +1158,7 @@ input[type="range"]::-moz-range-thumb {
   font:
     8px "JetBrains Mono Variable",
     monospace;
-  color: #9ba4b1;
+  color: #66717f;
   margin-top: 8px;
 }
 .flag-source {
@@ -1169,7 +1169,7 @@ input[type="range"]::-moz-range-thumb {
   background: #fafbfc;
   border-top: 1px solid #edf0f3;
   font-size: 9px;
-  color: #8a94a2;
+  color: #66717f;
 }
 .flag-source > .status-dot {
   margin-left: auto;
@@ -1188,7 +1188,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .chaos-body > p {
   font-size: 10px;
-  color: #9099a6;
+  color: #66717f;
   margin: 12px 0 13px;
 }
 .scenario-picker-wrap {
@@ -1217,7 +1217,7 @@ input[type="range"]::-moz-range-thumb {
 .scenario-picker small {
   display: block;
   font-size: 8px;
-  color: #949dab;
+  color: #66717f;
   margin-top: 4px;
 }
 .scenario-picker > svg {
@@ -1266,7 +1266,7 @@ input[type="range"]::-moz-range-thumb {
   font-size: 9px;
   display: block;
   margin-top: 4px;
-  color: #9099a6;
+  color: #66717f;
 }
 .inject-button {
   width: 100%;
@@ -1287,7 +1287,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .chaos-note {
   font-size: 8px;
-  color: #9aa2ae;
+  color: #66717f;
   display: block;
   text-align: center;
   margin-top: 9px;
@@ -1348,7 +1348,7 @@ input[type="range"]::-moz-range-thumb {
   background: transparent;
   border-radius: 3px;
   font-size: 9px;
-  color: #8e97a4;
+  color: #66717f;
   padding: 4px 9px;
 }
 .segmented button.selected {
@@ -1370,7 +1370,7 @@ input[type="range"]::-moz-range-thumb {
   font:
     8px "JetBrains Mono Variable",
     monospace;
-  color: #a1a9b5;
+  color: #66717f;
   padding: 4px 0 28px;
   width: 42px;
   flex-shrink: 0;
@@ -1394,7 +1394,7 @@ input[type="range"]::-moz-range-thumb {
   font:
     8px "JetBrains Mono Variable",
     monospace;
-  color: #a1a9b5;
+  color: #66717f;
   margin: 9px 0 0;
 }
 .empty-chart-label {
@@ -1402,7 +1402,7 @@ input[type="range"]::-moz-range-thumb {
   inset: 40% 0 auto;
   text-align: center;
   font-size: 10px;
-  color: #9aa4b2;
+  color: #66717f;
 }
 .chart-event {
   position: absolute;
@@ -1437,7 +1437,7 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   gap: 17px;
   font-size: 8px;
-  color: #919aa7;
+  color: #66717f;
   padding: 12px 18px 15px;
 }
 .chart-footer > span {
@@ -1471,7 +1471,7 @@ input[type="range"]::-moz-range-thumb {
 .cohorts-panel th {
   font-weight: 400;
   text-align: left;
-  color: #98a0ac;
+  color: #66717f;
   font-size: 9px;
   padding: 10px 18px;
   border-bottom: 1px solid #edf0f3;
@@ -1481,7 +1481,7 @@ input[type="range"]::-moz-range-thumb {
 .cohorts-panel td {
   padding: 11px 18px;
   border-bottom: 1px solid #f0f2f5;
-  color: #788391;
+  color: #66717f;
   white-space: nowrap;
   font-size: 9px;
 }
@@ -1555,7 +1555,7 @@ input[type="range"]::-moz-range-thumb {
   font:
     8px "JetBrains Mono Variable",
     monospace;
-  color: #9ba4b0;
+  color: #66717f;
   padding-top: 3px;
 }
 .event-symbol {
@@ -1593,7 +1593,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .event-row p {
   font-size: 9px;
-  color: #929caa;
+  color: #66717f;
   margin-top: 5px;
   line-height: 1.6;
 }
@@ -1604,7 +1604,7 @@ input[type="range"]::-moz-range-thumb {
   gap: 15px;
   margin-top: 19px;
   font-size: 9px;
-  color: #9aa3af;
+  color: #66717f;
 }
 .lab-bottom-note > span {
   display: flex;
@@ -1631,7 +1631,7 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 34px;
   padding-top: 18px;
   border-top: 1px solid #e5e8ed;
-  color: #9aa3b0;
+  color: #66717f;
   font-size: 9px;
 }
 .app-footer > span,
@@ -1666,7 +1666,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #9099a6;
+  color: #66717f;
   font:
     8px "JetBrains Mono Variable",
     monospace;
@@ -2194,7 +2194,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .replay-row p {
   font-size: 10px;
-  color: #8e99a9;
+  color: #66717f;
   margin-top: 6px;
 }
 .empty-state {
@@ -2223,7 +2223,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .empty-state p {
   font-size: 13px;
-  color: #8d98a7;
+  color: #66717f;
   margin-top: 11px;
 }
 .empty-state > .button {
@@ -4863,5 +4863,177 @@ input[type="range"]::-moz-range-thumb {
   }
   .scenario-options small {
     font-size: 10px;
+  }
+}
+.mobile-request-path {
+  display: none;
+}
+.button.primary kbd {
+  background: #b33d1c;
+  color: #fff;
+  border-color: #cf7357;
+}
+@media (max-width: 540px) {
+  .metrics-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .metric {
+    padding: 12px 9px;
+  }
+  .metric:nth-child(n + 3) {
+    border-top: 0;
+  }
+  .metric:nth-child(3)::before {
+    display: block;
+  }
+  .metric-label {
+    font-size: 9px;
+    line-height: 1.5;
+    min-height: 27px;
+  }
+  .metric-label svg,
+  .metric-detail,
+  .metric-chart {
+    display: none;
+  }
+  .metric-value {
+    font-size: 23px;
+    margin-top: 5px;
+  }
+  .metric-value small {
+    font-size: 10px;
+  }
+  .metric-value {
+    gap: 3px;
+  }
+  .lab-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .lab-main,
+  .lab-aside {
+    display: contents;
+  }
+  .flags-panel {
+    order: 0;
+    width: 100%;
+  }
+  .topology-panel {
+    order: 1;
+    width: 100%;
+  }
+  .chaos-panel {
+    order: 2;
+    width: 100%;
+  }
+  .guardrail-summary {
+    order: 3;
+    width: 100%;
+  }
+  .telemetry-panel {
+    order: 4;
+    width: 100%;
+  }
+  .flags-panel .panel-heading {
+    padding: 11px 14px;
+    min-height: 43px;
+  }
+  .flag-row {
+    padding: 10px 0;
+  }
+  .flag-info > span {
+    display: none;
+  }
+  .flag-info code {
+    font-size: 11px;
+  }
+  .flags-panel .rollout-control {
+    padding: 10px 15px;
+  }
+  .rollout-label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  .range-labels {
+    display: none;
+  }
+  .flag-source {
+    font-size: 9px;
+    padding: 9px 15px;
+  }
+  .flags-panel .toggle {
+    height: 17px;
+    width: 30px;
+  }
+  .flags-panel .toggle > span {
+    height: 13px;
+    width: 13px;
+  }
+  .flags-panel .toggle.on > span {
+    transform: translateX(13px);
+  }
+  .mobile-request-path {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 12px 14px 0;
+    border: 1px solid #dce3eb;
+    border-radius: 7px;
+    background: #fff;
+    padding: 10px 7px;
+    gap: 12px;
+  }
+  .mobile-path-step {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    font-size: 9px;
+    color: #526275;
+  }
+  .mobile-path-step > svg {
+    width: 12px;
+  }
+  .mobile-path-step.degraded {
+    color: #b83930;
+  }
+  .mobile-path-connector {
+    position: absolute;
+    left: 100%;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    color: #8d98a8;
+  }
+  .flowing .mobile-path-connector::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: #c94823;
+    top: 4px;
+    left: 0;
+    animation: mobile-traffic 1.3s linear infinite;
+  }
+  .has-failure .flowing .mobile-path-connector::after {
+    background: #ba3e35;
+  }
+  .topology-drawing {
+    padding-top: 14px;
+  }
+  .map-annotation {
+    font-size: 9px;
+  }
+  .mobile-request-path + .topology-drawing {
+    padding-bottom: 14px;
+  }
+}
+@keyframes mobile-traffic {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(13px);
   }
 }

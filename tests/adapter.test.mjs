@@ -181,3 +181,33 @@ test("adapter redacts secrets in errors returned to the browser", async () => {
     await new Promise((r) => server.close(r));
   }
 });
+
+test("numeric feature IDs from self-hosted management responses resolve through the official SDK", async () => {
+  const state = { ...flags };
+  const sdk = fakeSdk(state);
+  const original = sdk.getEnvironmentFlags;
+  sdk.getEnvironmentFlags = async () => {
+    const result = await original();
+    result.getFlag = (key) => ({
+      enabled: state[key],
+      isDefault: false,
+      featureId: key === "checkout_v2" ? 71 : 72,
+    });
+    return result;
+  };
+  const requests = [];
+  const adapter = createAdapter(config, {
+    sdk,
+    fetch: async (url, options) => {
+      requests.push(String(url));
+      if (options.method === "PATCH") {
+        state.checkout_v2 = false;
+        return Response.json({ enabled: false });
+      }
+      return Response.json([{ id: 91, feature: 71, enabled: true }]);
+    },
+  });
+  const result = await adapter.setFlag("checkout_v2", false);
+  assert.equal(result.confirmed, true);
+  assert.ok(requests.some((url) => url.endsWith("/featurestates/91/")));
+});

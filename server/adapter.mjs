@@ -96,9 +96,17 @@ export function createAdapter(config, dependencies = {}) {
         path = next.href;
       } else path = null;
     }
+    const evaluated = await sdk.getEnvironmentFlags();
+    featureStates.clear();
     for (const row of rows) {
-      if (row.feature && typeof row.feature === "object")
+      if (row.feature && typeof row.feature === "object") {
         featureStates.set(row.feature.name, row.id);
+      } else {
+        const key = FLAG_KEYS.find(
+          (name) => evaluated.getFlag(name)?.featureId === row.feature,
+        );
+        if (key) featureStates.set(key, row.id);
+      }
     }
     return rows;
   }

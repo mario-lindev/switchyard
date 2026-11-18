@@ -1,6 +1,15 @@
 name: Self-hosted stack smoke test
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      [
+        "server/**",
+        "compose.yaml",
+        "scripts/connected-smoke.ts",
+        ".github/workflows/docker-smoke.yml",
+      ]
 permissions:
   contents: read
 jobs:

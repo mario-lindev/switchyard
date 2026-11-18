@@ -482,11 +482,37 @@ function Topology({
           <span className={`status-dot ${active ? "green" : "slate"}`} />
           {active
             ? "Traffic flowing"
-            : state.elapsed
-              ? "Rehearsal paused"
-              : "Ready for traffic"}
+            : state.phase === "completed"
+              ? "Rehearsal complete"
+              : state.elapsed
+                ? "Rehearsal paused"
+                : "Ready for traffic"}
           <span className="annotation-rule" />
           <span>{state.rollout}% candidate</span>
+        </div>
+        <div
+          className={`mobile-request-path ${active ? "flowing" : ""}`}
+          aria-label="Synthetic request path"
+        >
+          {[
+            { id: "gateway", label: "Gateway", icon: Network },
+            { id: "checkout", label: "Checkout", icon: ShoppingBag },
+            { id: "payments", label: "Payments", icon: CreditCard },
+            { id: "database", label: "Postgres", icon: Database },
+          ].map((node, index) => (
+            <div
+              key={node.id}
+              className={`mobile-path-step ${failing && node.id === faultService ? "degraded" : ""}`}
+            >
+              <node.icon size={13} />
+              <span>{node.label}</span>
+              {index < 3 && (
+                <span className="mobile-path-connector">
+                  <ChevronRight size={12} />
+                </span>
+              )}
+            </div>
+          ))}
         </div>
         <div className="topology-drawing">
           <svg
