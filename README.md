@@ -9,7 +9,7 @@
 Rehearse a rollout. Inject a failure. Find the affected cohort.<br/>
 Prove that flipping the flag brings the release back to safety.
 
-[Try the sandbox](https://switchyard-release-lab.jocosetoffee16.chatgpt.site) · [Demo script](docs/DEMO.md) · [Architecture](docs/ARCHITECTURE.md) · [Hackathon fit](docs/HACKATHON.md)
+[Try the sandbox](https://switchyard-drab.vercel.app) · [Demo script](docs/DEMO.md) · [Architecture](docs/ARCHITECTURE.md) · [Hackathon fit](docs/HACKATHON.md)
 
 MIT licensed · React + TypeScript · Official Flagsmith Node SDK · Docker Compose
 

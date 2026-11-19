@@ -12,3 +12,4 @@ dist/
 
 .ci.env
 /connected-evidence.json
+.vercel/
